@@ -48,7 +48,7 @@ int summa = 0;
 int index = 0;
 while (index < size)
 {
-  if (index % 2 == 1)
+  if (index % 2 != 0)
   {
     summa += value[index];
     index++;
