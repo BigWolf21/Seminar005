@@ -17,11 +17,9 @@ int[] CreateArray(int size)
 void FillArrayRandom(int[] collection)
 {
   int size = collection.Length;
-  int index = 0;
-  while (index < size)
+  for (int index = 0; index < size; index++)
   {
     collection[index] = new Random().Next(-100, 100);
-    index++;
   }
 
 }
@@ -30,11 +28,9 @@ string Print(int[] array)
 {
   string result = String.Empty;
   int len = array.Length;
-  int index = 0;
-  while (index < len)
+  for (int index = 0; index < len; index++)
   {
     result = result + " " + array[index];
-    index++;
   }
   return result;
 }
@@ -45,18 +41,12 @@ FillArrayRandom(value);
 Console.WriteLine(Print(value));
 
 int summa = 0;
-int index = 0;
-while (index < size)
+for (int index = 0; index < size; index++)
 {
   if (index % 2 != 0)
   {
     summa += value[index];
-    index++;
-  }
-  else
-  {
-    index++;
   }
 }
 
-Console.WriteLine("Сумма элементов, стоящих на нечётных позициях в массиве = " + summa);
+Console.WriteLine($"Сумма элементов, стоящих на нечётных позициях в массиве = {summa}");
